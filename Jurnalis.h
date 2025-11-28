@@ -4,16 +4,15 @@
 #include <iostream>
 #include <string>
 #include "Berita.h"
-using namespace std;
 
-typedef struct elmJurnalis* adrJurnalis;
-typedef Jurnalis infotypeJurnalis;
+typedef Jurnalis infotypeP;
+typedef struct elmJurnalis* addressP;
 
-struct elmJurnalis{
-    infotypeJurnalis info;
-    adrJurnalis next;
-    adrBerita child;
-};
+struct elmJurnalis {
+    infotypeP info;
+    addressP next;
+    addressC child;
+}
 
 struct Jurnalis{
     string idJurnalis;
@@ -21,17 +20,20 @@ struct Jurnalis{
     string media;
 };
 
-struct List{
-    adrJurnalis first;
-    adrJurnalis last;
+struct ListParent {
+    addressP first;
 };
 
-void createList(List &L);
-adrJurnalis createElmJurnalis(infotypeJurnalis data);
-void insertJurnalis(List &L, adrJurnalis P);
-void deleteJurnalis(List &L, string idJurnalis);
-adrJurnalis findJurnalis(List L, string idJurnalis);
-void showAllJurnalis(List L);
+void createListParent(ListParent &L);
+addressP createElementParent(infotypeP X);
+void insertFirstParent(ListParent &L, addressP P);
+void insertLastParent(ListParent &L, addressP P);
+void insertAfterParent(ListParent &L, addressP prec, addressP P);
+void deleteFirstParent(ListParent &L, addressP &P);
+void deleteLastParent(ListParent &L, addressP &P);
+void deleteAfterParent(ListParent &L, addressP prec, addressP &P);
+addressP findElementParent(ListParent L, string idDicari);
+void viewParent(ListParent L);
 
 
 #endif // JURNALIS_H_INCLUDED
