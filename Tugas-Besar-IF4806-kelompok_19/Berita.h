@@ -1,6 +1,0 @@
-#ifndef BERITA_H_INCLUDED
-#define BERITA_H_INCLUDED
-
-
-
-#endif // BERITA_H_INCLUDED
