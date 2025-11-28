@@ -9,7 +9,7 @@ using namespace std;
 typedef struct elmJurnalis* adrJurnalis;
 typedef Jurnalis infotypeJurnalis;
 
-struct elmJurnalis {
+struct elmJurnalis{
     infotypeJurnalis info;
     adrJurnalis next;
     adrBerita child;
@@ -21,7 +21,7 @@ struct Jurnalis{
     string media;
 };
 
-struct List {
+struct List{
     adrJurnalis first;
     adrJurnalis last;
 };
