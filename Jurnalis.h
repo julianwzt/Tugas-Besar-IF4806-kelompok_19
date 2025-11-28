@@ -8,7 +8,7 @@
 typedef Jurnalis infotypeP;
 typedef struct elmJurnalis* addressP;
 
-struct elmJurnalis {
+struct elmJurnalis{
     infotypeP info;
     addressP next;
     addressC child;
@@ -20,7 +20,7 @@ struct Jurnalis{
     string media;
 };
 
-struct ListParent {
+struct ListParent{
     addressP first;
 };
 
