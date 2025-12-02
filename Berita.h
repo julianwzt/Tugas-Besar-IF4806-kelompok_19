@@ -14,26 +14,31 @@ struct elmBerita{
     string tanggal;
     int views;
     int likes;
-
     adrBerita next;
+    adrBerita prev;
     adrRelasi firstRelasi; //hubungan ke jurnalis
 };
 
 struct ListBerita{
     adrBerita first;
+    adrBerita last;
 };
 
-void createListBerita(adrBerita &first);
+void createListBerita(ListBerita &L);
 adrBerita createNodeBerita(int id, string judul, isi, tanggal, kategori);
+
 void insertFirstBerita(ListBerita &L, adrBerita P);
 void insertLastBerita(ListBerita &L, adrBerita P);
 void insertAfterBerita(ListBerita &L, int idSebelum, adrBerita P);
+
 void deleteFirstBerita(ListBerita &L);
 void deleteLastBerita(ListBerita &L);
 void deleteAfterBerita(ListBerita &L, int idSebelum);
 void deleteBeritaById(ListBerita &L, int id);
+
 void showAllBerita(ListBerita L);
 adrBerita findBerita(ListBerita L, int id);
+
 adrBerita getMostViewedBerita(ListBerita L);
 adrBerita getMostLikedBerita(ListBerita L);
 int countBerita(ListBerita L);
