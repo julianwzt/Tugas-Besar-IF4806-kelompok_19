@@ -32,7 +32,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Berita.h" />
+		<Unit filename="Jurnalis.h" />
+		<Unit filename="berita_103012400047.cpp" />
+		<Unit filename="berita_103012400189.cpp" />
+		<Unit filename="jurnalis_103012400047.cpp" />
+		<Unit filename="jurnalis_103012400189.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main_admin.cpp" />
+		<Unit filename="main_user.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -15,6 +15,7 @@ struct elmBerita{
     int views;
     int likes;
     adrBerita next;
+    adrBerita prev;
     adrRelasi firstRelasi; //hubungan ke jurnalis
 };
 
@@ -23,7 +24,7 @@ struct ListBerita{
     adrBerita last;
 };
 
-void createListBerita(adrBerita &first);
+void createListBerita(ListBerita &L);
 adrBerita createNodeBerita(int id, string judul, isi, tanggal, kategori);
 
 void insertFirstBerita(ListBerita &L, adrBerita P);
