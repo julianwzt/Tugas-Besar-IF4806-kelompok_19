@@ -1,7 +1,10 @@
 #ifndef BERITA_H_INCLUDED
 #define BERITA_H_INCLUDED
+
 #include <iostream>
 #include <string>
+
+using namespace std;
 
 typedef int infotype;
 typedef struct elmBerita *adrBerita;
