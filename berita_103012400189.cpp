@@ -16,7 +16,6 @@ void deleteBeritaById(ListBerita &L, int id) {
     } else if (P == L.last) {
         deleteLastBerita(L, P);
     } else {
-        // Hapus di tengah (Logika pengganti deleteAfter)
         P->prev->next = P->next;
         P->next->prev = P->prev;
         P->next = nullptr;
