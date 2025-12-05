@@ -14,7 +14,7 @@ void deleteJurnalisById(ListParent &L, string id){
     }
 
     if (P == nullptr) {
-        cout << "Jurnalis tidak ditemukan." << endl;
+        cout << "Jurnalis ID " << id << " tidak ditemukan." << endl;
         return;
     }
     disconnectAll(P);
@@ -41,6 +41,10 @@ addressP findElementParent(ListParent L, string idDicari){
 
 void viewParent(ListParent L){
     addressP P = L.first;
+    if (L.first == nullptr){
+        cout << "Data Kosong" << endl;
+        return;
+    }
     while (P != nullptr) {
         cout << "Jurnalis: " << P->info.nama << " (" << P->info.idJurnalis << ")" << endl;
         addressC R = P->child;

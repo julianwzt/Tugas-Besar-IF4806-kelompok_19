@@ -79,7 +79,7 @@ void connect(addressP P, adrBerita B) {
     }
 }
 
-void disconnect(addressP P, int idBerita) {
+void disconnect(addressP P, string idBerita) {
     if (P != nullptr) {
         addressC R = P->child;
         addressC Prec = nullptr;
