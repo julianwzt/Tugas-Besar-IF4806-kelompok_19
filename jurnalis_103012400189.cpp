@@ -1,4 +1,8 @@
+#include <iostream>
+#include "Berita.h"
 #include "Jurnalis.h"
+
+using namespace std;
 
 void createListParent(ListParent &L) {
     L.first = nullptr;

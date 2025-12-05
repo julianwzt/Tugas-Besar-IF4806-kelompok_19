@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Berita.h"
+#include "Jurnalis.h"
 
 using namespace std;
 
