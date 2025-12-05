@@ -9,7 +9,7 @@ void createListBerita(ListBerita &L){
     L.last = nullptr;
 }
 
-adrBerita createNodeBerita(int id, string judul, string isi, string tanggal, string kategori){
+adrBerita createNodeBerita(string id, string judul, string isi, string tanggal, string kategori){
     adrBerita p = new elmBerita;
     p->id_berita = id;
     p->judul = judul;
@@ -19,7 +19,7 @@ adrBerita createNodeBerita(int id, string judul, string isi, string tanggal, str
     p->views = 0;
     p->likes = 0;
     p->next = nullptr;
-    p->firstRelasi = nullptr;
+    p->prev = nullptr;
 
     return p;
 }
@@ -51,7 +51,7 @@ void deleteFirstBerita(ListBerita &L){
     adrBerita P;
     if (L.first == nullptr){
         P = nullptr;
-        cout << "List Kosong" << endl;
+        cout << "Berita Kosong" << endl;
     }else if(L.first == L.last){
         P = L.first;
         L.first = nullptr;
@@ -68,7 +68,7 @@ void deleteLastBerita(ListBerita &L){
     adrBerita P;
     if (L.first == nullptr){
         P = nullptr;
-        cout << "List Kosong" << endl;
+        cout << "Berita Kosong" << endl;
     }else if(L.first == L.last){
         P = L.first;
         L.first = nullptr;
@@ -85,7 +85,7 @@ void showAllBerita(ListBerita L){
     adrBerita P;
     P = L.first;
     if (L.first == nullptr){
-        cout << "List Kosong" << endl;
+        cout << "Berita Kosong" << endl;
         return;
     }
     while (P != nullptr){

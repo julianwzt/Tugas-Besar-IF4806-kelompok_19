@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "Jurnalis.h"
+
 
 using namespace std;
 
@@ -11,7 +11,7 @@ typedef int infotype;
 typedef struct elmBerita *adrBerita;
 
 struct elmBerita{
-    int id_berita;
+    string id_berita;
     string judul;
     string kategori;
     string isi;
@@ -20,7 +20,7 @@ struct elmBerita{
     int likes;
     adrBerita next;
     adrBerita prev;
-    adrRelasi firstRelasi; //hubungan ke jurnalis
+
 };
 
 struct ListBerita{
@@ -29,19 +29,19 @@ struct ListBerita{
 };
 
 void createListBerita(ListBerita &L);
-adrBerita createNodeBerita(int id, string judul, string isi, string tanggal, string kategori);
+adrBerita createNodeBerita(string id, string judul, string isi, string tanggal, string kategori);
 
 void insertFirstBerita(ListBerita &L, adrBerita P);
 void insertLastBerita(ListBerita &L, adrBerita P);
-void insertAfterBerita(ListBerita &L, int idSebelum, adrBerita P);
+void insertAfterBerita(ListBerita &L, string idSebelum, adrBerita P);
 
 void deleteFirstBerita(ListBerita &L);
 void deleteLastBerita(ListBerita &L);
-void deleteAfterBerita(ListBerita &L, int idSebelum);
-void deleteBeritaById(ListBerita &L, int id);
+void deleteAfterBerita(ListBerita &L, string idSebelum);
+void deleteBeritaById(ListBerita &L, string id);
 
 void showAllBerita(ListBerita L);
-adrBerita findBerita(ListBerita L, int id);
+adrBerita findBerita(ListBerita L, string id);
 
 adrBerita getMostViewedBerita(ListBerita L);
 adrBerita getMostLikedBerita(ListBerita L);

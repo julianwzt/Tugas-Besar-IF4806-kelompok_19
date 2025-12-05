@@ -44,8 +44,8 @@ void deleteJurnalisById(ListParent &L, string id);
 
 addressP findElementParent(ListParent L, string idDicari);
 void viewParent(ListParent L);
-void connect(addressP P, adrBerita B);//
-void disconnect(addressP P, int idBerita);//
-void disconnectAll(addressP P);//
+void connect(addressP P, adrBerita B);
+void disconnect(addressP P, string idBerita);
+void disconnectAll(addressP P);
 
 #endif // JURNALIS_H_INCLUDED
