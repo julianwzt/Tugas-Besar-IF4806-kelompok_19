@@ -18,7 +18,7 @@ int main() {
     while (pil != 0) {
         cout << "\n======= MAIN MENU =======" << endl;
         cout << "||1. Admin             ||" << endl;
-        cout << "||2. User (Studi Kasus)||" << endl;
+        cout << "||2. User              ||" << endl;
         cout << "||0. Exit              ||"<< endl;
         cout << "=========================" <<endl;
         cout << "Pilihan: "; cin >> pil;
@@ -31,3 +31,4 @@ int main() {
     }
     return 0;
 }
+
