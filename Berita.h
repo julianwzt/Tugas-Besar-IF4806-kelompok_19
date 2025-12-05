@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Jurnalis.h"
 
 using namespace std;
 
@@ -28,7 +29,7 @@ struct ListBerita{
 };
 
 void createListBerita(ListBerita &L);
-adrBerita createNodeBerita(int id, string judul, isi, tanggal, kategori);
+adrBerita createNodeBerita(int id, string judul, string isi, string tanggal, string kategori);
 
 void insertFirstBerita(ListBerita &L, adrBerita P);
 void insertLastBerita(ListBerita &L, adrBerita P);

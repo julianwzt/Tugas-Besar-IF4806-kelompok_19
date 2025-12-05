@@ -9,7 +9,7 @@ void createListBerita(ListBerita &L){
     L.last = nullptr;
 }
 
-adrBerita createNodeBerita(int id, string judul, isi, tanggal, kategori){
+adrBerita createNodeBerita(int id, string judul, string isi, string tanggal, string kategori){
     adrBerita p = new elmBerita;
     p->id_berita = id;
     p->judul = judul;
@@ -31,6 +31,7 @@ void insertFirstBerita(ListBerita &L, adrBerita P){
         L.last = P;
     }else{
         P->next = L.first;
+        L.first->prev = P;
         L.first = P;
     }
 }
@@ -40,7 +41,8 @@ void insertLastBerita(ListBerita &L, adrBerita P){
         L.first = P;
         L.last = P;
     }else{
-        L.last = P;
+        L.last->next = P;
+        P->prev = L.last;
         L.last = P;
     }
 }
@@ -105,7 +107,7 @@ void showAllBerita(ListBerita L){
     count = 0;
     P = L.first;
     while (P != nullptr){
-        count++
+        count++;
         P = P->next;
     }
     return count;
