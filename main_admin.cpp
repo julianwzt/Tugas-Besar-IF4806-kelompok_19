@@ -28,6 +28,7 @@ void runMenuAdmin(ListParent &LJ, ListBerita &LB){
             cout << "Media: ";
             cin >> data.media;
             insertFirstParent(LJ, createElementParent(data));
+            cout << "Jurnalis Berhasil ditambahkan!" << endl;
         }else if(menu == 2){
             string id, j, k, i, t;
             cout << "ID: ";
@@ -41,7 +42,8 @@ void runMenuAdmin(ListParent &LJ, ListBerita &LB){
             cout << "Tanggal: ";
             cin >> t;
             insertFirstBerita(LB, createNodeBerita(id, j, i, t, k));
-        }else if(menu == 3){
+            cout << "Berita Berhasil ditambahkan!" << endl;
+        }else if (menu == 3){
             string idJ, idB;
             cout << "ID Jurnalis: ";
             cin >> idJ;
@@ -51,9 +53,9 @@ void runMenuAdmin(ListParent &LJ, ListBerita &LB){
             adrBerita B = findBerita(LB, idB);
             if(P && B){
                 connect(P, B);
-                cout << "Jurnalis dan Berita Berhasil terhubung." << endl;
+                cout << "Jurnalis dan Berita Berhasil terhubung" << endl;
             }else{
-                cout << "ID jurnalis/Berita tidak ditemukan." << endl;
+                cout << "ID jurnalis/Berita tidak ditemukan" << endl;
             }
         }else if(menu == 4){
             string idJ;
