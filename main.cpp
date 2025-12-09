@@ -7,7 +7,7 @@ using namespace std;
 void runMenuAdmin(ListParent &LJ, ListBerita &LB);
 void runMenuUser(ListParent &LJ, ListBerita &LB);
 
-int main() {
+int main(){
     ListParent LJ;
     ListBerita LB;
 
@@ -15,7 +15,7 @@ int main() {
     createListBerita(LB);
 
     int pil = -1;
-    while (pil != 0) {
+    while(pil != 0){
         cout << "\n======= MAIN MENU =======" << endl;
         cout << "||1. Admin             ||" << endl;
         cout << "||2. User              ||" << endl;
@@ -23,9 +23,9 @@ int main() {
         cout << "=========================" <<endl;
         cout << "Pilihan: "; cin >> pil;
 
-        if (pil == 1) {
+        if(pil == 1){
             runMenuAdmin(LJ, LB);
-        } else if (pil == 2) {
+        }else if (pil == 2){
             runMenuUser(LJ, LB);
         }
     }

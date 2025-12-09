@@ -4,9 +4,9 @@
 
 using namespace std;
 
-void runMenuUser(ListParent &LJ, ListBerita &LB) {
+void runMenuUser(ListParent &LJ, ListBerita &LB){
     int pil = -1;
-    while (pil != 0) {
+    while(pil != 0){
         cout << "\n========== MENU USER ==========" << endl;
         cout << "||1. Cari Berita             ||" << endl;
         cout << "||2. Lihat Berita Terpopuler ||" << endl;
@@ -16,24 +16,35 @@ void runMenuUser(ListParent &LJ, ListBerita &LB) {
         cout << "Pilihan: ";
         cin >> pil;
 
-        if (pil == 1) {
+        if(pil == 1){
             string id;
             cout << "ID Berita: ";
             cin >> id;
             adrBerita B = findBerita(LB, id);
-            if (B) {
+            if(B){
                 cout << "Ditemukan: " << B->judul << endl;
                 B->views++;
                 cout << "Views bertambah jadi: " << B->views << endl;
+
+                char jawab;
+                cout << "Apakah Anda ingin menyukai berita ini? (y/n): ";
+                cin >> jawab;
+
+                if(jawab == 'y' || jawab == 'Y'){
+                    B->likes++;
+                    cout << "Berita disukai! Total Likes saat ini: " << B->likes << endl;
+                }else{
+                    cout << "Anda tidak menyukai berita ini." << endl;
+                }
             }else{
                 cout << "Berita ID " << id << " tidak ditemukan." << endl;
             }
         }
-        else if (pil == 2) {
+        else if(pil == 2){
             adrBerita B = getMostViewedBerita(LB);
             if(B) cout << "Top: " << B->judul << " (" << B->views << " views)" << endl;
         }
-        else if (pil == 3) {
+        else if(pil == 3){
             showAllBerita(LB);
         }
     }

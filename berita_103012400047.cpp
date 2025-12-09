@@ -18,6 +18,7 @@ adrBerita createNodeBerita(string id, string judul, string isi, string tanggal, 
     p->tanggal = tanggal;
     p->views = 0;
     p->likes = 0;
+    p->idPenulis = "";
     p->next = nullptr;
     p->prev = nullptr;
 
@@ -26,7 +27,7 @@ adrBerita createNodeBerita(string id, string judul, string isi, string tanggal, 
 
 
 void insertFirstBerita(ListBerita &L, adrBerita P){
-    if (L.first == nullptr){
+    if(L.first == nullptr){
         L.first = P;
         L.last = P;
     }else{
@@ -37,7 +38,7 @@ void insertFirstBerita(ListBerita &L, adrBerita P){
 }
 
 void insertLastBerita(ListBerita &L, adrBerita P){
-    if (L.first == nullptr){
+    if(L.first == nullptr){
         L.first = P;
         L.last = P;
     }else{
@@ -49,7 +50,7 @@ void insertLastBerita(ListBerita &L, adrBerita P){
 
 void deleteFirstBerita(ListBerita &L){
     adrBerita P;
-    if (L.first == nullptr){
+    if(L.first == nullptr){
         P = nullptr;
         cout << "Berita Kosong" << endl;
     }else if(L.first == L.last){
@@ -66,7 +67,7 @@ void deleteFirstBerita(ListBerita &L){
 
 void deleteLastBerita(ListBerita &L){
     adrBerita P;
-    if (L.first == nullptr){
+    if(L.first == nullptr){
         P = nullptr;
         cout << "Berita Kosong" << endl;
     }else if(L.first == L.last){
@@ -84,12 +85,13 @@ void deleteLastBerita(ListBerita &L){
 void showAllBerita(ListBerita L){
     adrBerita P;
     P = L.first;
-    if (L.first == nullptr){
+    if(L.first == nullptr){
         cout << "Berita Kosong" << endl;
         return;
     }
-    while (P != nullptr){
-        cout << "ID: " << P->id_berita << endl;
+    while(P != nullptr){
+        cout << "ID Berita: " << P->id_berita << endl;
+        cout << "ID Penulis: " << P->idPenulis << endl;
         cout << "Judul: " << P->judul << endl;
         cout << "Kategori: " << P->kategori << endl;
         cout << "Isi: " << P->isi << endl;
@@ -103,7 +105,6 @@ void showAllBerita(ListBerita L){
  int countBerita(ListBerita L){
     int count;
     adrBerita P;
-
     count = 0;
     P = L.first;
     while (P != nullptr){

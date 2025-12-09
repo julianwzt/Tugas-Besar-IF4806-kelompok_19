@@ -7,7 +7,6 @@
 
 using namespace std;
 
-typedef int infotype;
 typedef struct elmBerita *adrBerita;
 
 struct elmBerita{
@@ -18,6 +17,7 @@ struct elmBerita{
     string tanggal;
     int views;
     int likes;
+    string idPenulis;
     adrBerita next;
     adrBerita prev;
 
