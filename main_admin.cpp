@@ -4,19 +4,10 @@
 
 using namespace std;
 
-void hapusBeritaBersih(ListBerita &LB, ListParent &LJ, string id){
-    addressP P = LJ.first;
-    while (P != nullptr) {
-        disconnect(P, id);
-        P = P->next;
-    }
-    deleteBeritaById(LB, id);
-}
-
-void runMenuAdmin(ListParent &LJ, ListBerita &LB) {
+void runMenuAdmin(ListParent &LJ, ListBerita &LB){
     int menu;
     menu = -1;
-    while (menu != 0) {
+    while(menu != 0){
         cout << "\n========= MENU ADMIN =========" << endl;
         cout << "|| 1. Tambah Jurnalis        ||" << endl;
         cout << "|| 2. Tambah Berita          ||" << endl;
@@ -28,7 +19,7 @@ void runMenuAdmin(ListParent &LJ, ListBerita &LB) {
         cout << "===============================" <<endl;
         cout << "Pilihan:";
         cin >> menu;
-        if (menu == 1) {
+        if(menu == 1){
             infotypeP data;
             cout << "ID: ";
             cin >> data.idJurnalis;
@@ -38,7 +29,7 @@ void runMenuAdmin(ListParent &LJ, ListBerita &LB) {
             cin >> data.media;
             insertFirstParent(LJ, createElementParent(data));
             cout << "Jurnalis Berhasil ditambahkan!" << endl;
-        }else if (menu == 2){
+        }else if(menu == 2){
             string id, j, k, i, t;
             cout << "ID: ";
             cin >> id;
@@ -60,24 +51,24 @@ void runMenuAdmin(ListParent &LJ, ListBerita &LB) {
             cin >> idB;
             addressP P = findElementParent(LJ, idJ);
             adrBerita B = findBerita(LB, idB);
-            if(P && B) {
+            if(P && B){
                 connect(P, B);
                 cout << "Jurnalis dan Berita Berhasil terhubung" << endl;
-            } else {
+            }else{
                 cout << "ID jurnalis/Berita tidak ditemukan" << endl;
             }
-        }else if (menu == 4){
+        }else if(menu == 4){
             string idJ;
             cout << "Masukkan ID Jurnalis yg ingin dihapus: ";
             cin >> idJ;
             deleteJurnalisById(LJ, idJ);
-        }else if (menu == 5){
+        }else if(menu == 5){
             string idB;
             cout << "Masukkan ID Berita yg ingin dihapus: ";
             cin >> idB;
-            hapusBeritaBersih(LB, LJ, idB);
-        }else if (menu == 6){
-            viewParent(LJ);
+            deleteBeritaById(LB, idB);
+        }else if(menu == 6){
+            viewParent(LJ, LB);
         }
     }
 }

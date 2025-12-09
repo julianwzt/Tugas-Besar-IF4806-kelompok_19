@@ -8,23 +8,19 @@ void deleteJurnalisById(ListParent &L, string id){
     addressP P = L.first;
     addressP Prec = nullptr;
 
-    while (P != nullptr && P->info.idJurnalis != id) {
+    while (P != nullptr && P->info.idJurnalis != id){
         Prec = P;
         P = P->next;
     }
-
-    if (P == nullptr) {
+    if(P == nullptr){
         cout << "Jurnalis ID " << id << " tidak ditemukan." << endl;
         return;
     }
-    disconnectAll(P);
-
-    if (Prec == nullptr) {
+    if(Prec == nullptr){
         L.first = P->next;
-    } else {
+    }else{
         Prec->next = P->next;
     }
-
     delete P;
     cout << "Jurnalis " << id << " berhasil dihapus." << endl;
 }
@@ -32,26 +28,34 @@ void deleteJurnalisById(ListParent &L, string id){
 
 addressP findElementParent(ListParent L, string idDicari){
     addressP P = L.first;
-    while (P != nullptr) {
-        if (P->info.idJurnalis == idDicari) return P;
+    while(P != nullptr){
+        if(P->info.idJurnalis == idDicari){
+            return P;
+        }
         P = P->next;
     }
     return nullptr;
 }
 
-void viewParent(ListParent L){
-    addressP P = L.first;
-    if (L.first == nullptr){
-        cout << "Data Kosong" << endl;
+void viewParent(ListParent LJ, ListBerita LB){
+    addressP P = LJ.first;
+    if(P == nullptr){
+        cout << "Data Jurnalis Kosong" << endl;
         return;
     }
-    while (P != nullptr) {
+    while(P != nullptr){
         cout << "Jurnalis: " << P->info.nama << " (" << P->info.idJurnalis << ")" << endl;
-        addressC R = P->child;
-        while (R != nullptr) {
-            cout << "  -> " << R->infoBerita->judul << endl;
-            R = R->next;
+
+        adrBerita B = LB.first;
+        bool adaTulisan = false;
+        while(B != nullptr){
+            if(B->idPenulis == P->info.idJurnalis){
+                cout << "  -> " << B->judul << " (" << B->views << " views)" << endl;
+                adaTulisan = true;
+            }
+            B = B->next;
         }
+        if(!adaTulisan) cout << "  -> (Belum ada tulisan)" << endl;
         cout << "-----------------" << endl;
         P = P->next;
     }
