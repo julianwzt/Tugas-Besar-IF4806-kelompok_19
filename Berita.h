@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 
-
 using namespace std;
 
 typedef struct elmBerita *adrBerita;
@@ -20,32 +19,12 @@ struct elmBerita{
     string idPenulis;
     adrBerita next;
     adrBerita prev;
-
 };
 
-struct ListBerita{
-    adrBerita first;
-    adrBerita last;
-};
-
-void createListBerita(ListBerita &L);
-adrBerita createNodeBerita(string id, string judul, string isi, string tanggal, string kategori);
-
-void insertFirstBerita(ListBerita &L, adrBerita P);
-void insertLastBerita(ListBerita &L, adrBerita P);
-void insertAfterBerita(ListBerita &L, string idSebelum, adrBerita P);
-
-void deleteFirstBerita(ListBerita &L);
-void deleteLastBerita(ListBerita &L);
-void deleteAfterBerita(ListBerita &L, string idSebelum);
-void deleteBeritaById(ListBerita &L, string id);
-
-void showAllBerita(ListBerita L);
-adrBerita findBerita(ListBerita L, string id);
-
-adrBerita getMostViewedBerita(ListBerita L);
-adrBerita getMostLikedBerita(ListBerita L);
-int countBerita(ListBerita L);
-
+adrBerita createNodeBerita(string id, string judul, string isi, string tanggal, string kategori, string idPenulis);
+void insertBeritaSortedByViews(adrBerita &firstBerita, adrBerita P);
+void insertBeritaToJurnalis(adrBerita &firstBerita, adrBerita P);
+void deleteBeritaById(adrBerita &firstBerita, string id);
+void showBeritaByJurnalis(adrBerita firstBerita);
 
 #endif // BERITA_H_INCLUDED
