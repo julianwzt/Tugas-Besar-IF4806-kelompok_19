@@ -79,3 +79,46 @@
 	"Berita.h"
 	<iostream>
 
+1764934674 source:d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita_103012400047.cpp
+	<iostream>
+	"Berita.h"
+	"Jurnalis.h"
+
+1764934674 d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita.h
+	<iostream>
+	<string>
+
+1764934674 d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis.h
+	<iostream>
+	<string>
+	"Berita.h"
+
+1764934674 source:d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita_103012400189.cpp
+	<iostream>
+	"Berita.h"
+
+1764934674 source:d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis_103012400047.cpp
+	<iostream>
+	"Berita.h"
+	"Jurnalis.h"
+
+1764934674 source:d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis_103012400189.cpp
+	<iostream>
+	"Berita.h"
+	"Jurnalis.h"
+
+1764934674 source:d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main.cpp
+	<iostream>
+	"Jurnalis.h"
+	"Berita.h"
+
+1764934674 source:d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main_admin.cpp
+	"Jurnalis.h"
+	"Berita.h"
+	<iostream>
+
+1764934674 source:d:\kuliah\semester 3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main_user.cpp
+	"Jurnalis.h"
+	"Berita.h"
+	<iostream>
+

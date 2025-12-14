@@ -20,59 +20,41 @@ void runMenuAdmin(ListParent &LJ){
 
         if(menu == 1){
             infotypeP data;
-            cout << "ID: "; cin >> data.idJurnalis;
-            cout << "Nama: "; cin >> data.nama;
-            cout << "Media: "; cin >> data.media;
-            cout << "Rating (1-100): "; cin >> data.rating;
-            insertParentSortedByRating(LJ, createElementParent(data));
-            cout << "Jurnalis berhasil ditambahkan." << endl;
-
+            cout << "ID: ";
+            cin >> data.idJurnalis;
+            cout << "Nama: ";
+            cin >> data.nama;
+            cout << "Media: ";
+            cin >> data.media;
+            insertFirstParent(LJ, createElementParent(data));
+            cout << "Jurnalis Berhasil ditambahkan!" << endl;
         }else if(menu == 2){
-            int nPenulis;
-            cout << "Berita ini ditulis oleh berapa jurnalis? : ";
-            cin >> nPenulis;
-
-            if(nPenulis > 0){
-                string idB, judul, kat, isi, tgl;
-                cout << "\n>> Masukkan Data Berita <<" << endl;
-                cout << "ID Berita : "; cin >> idB;
-                cout << "Judul     : "; cin >> judul;
-                cout << "Kategori  : "; cin >> kat;
-                cout << "Isi       : "; cin >> isi;
-                cout << "Tanggal   : "; cin >> tgl;
-                for(int i = 1; i <= nPenulis; i++){
-                    string idJ;
-                    cout << "\nMasukkan ID Jurnalis ke-" << i << ": ";
-                    cin >> idJ;
-                    addressP P = findElementParent(LJ, idJ);
-                    if(P != nullptr){
-                        adrBerita B = createNodeBerita(idB, judul, isi, tgl, kat, idJ);
-                        insertBeritaSortedByViews(P->berita, B);
-                        cout << "-> [Sukses] Berita ditambahkan ke Jurnalis " << P->info.nama << endl;
-                    }else{
-                        cout << "-> [Gagal] Jurnalis ID " << idJ << " tidak ditemukan!" << endl;
-                    }
-                }
+            string id, j, k, i, t;
+            cout << "ID: ";
+            cin >> id;
+            cout << "Judul: ";
+            cin >> j;
+            cout << "Kategori: ";
+            cin >> k;
+            cout << "Isi: ";
+            cin >> i;
+            cout << "Tanggal: ";
+            cin >> t;
+            insertFirstBerita(LB, createNodeBerita(id, j, i, t, k));
+            cout << "Berita Berhasil ditambahkan!" << endl;
+        }else if (menu == 3){
+            string idJ, idB;
+            cout << "ID Jurnalis: ";
+            cin >> idJ;
+            cout << "ID Berita: ";
+            cin >> idB;
+            addressP P = findElementParent(LJ, idJ);
+            adrBerita B = findBerita(LB, idB);
+            if(P && B){
+                connect(P, B);
+                cout << "Jurnalis dan Berita Berhasil terhubung" << endl;
             }else{
-                cout << "Jumlah penulis tidak valid." << endl;
-            }
-
-        }else if(menu == 3){
-            int subMenu;
-            cout << "\n============== Hapus Jurnalis =============="<<endl;
-            cout << "1. Hapus berdasarkan ID Spesifik          ||" << endl;
-            cout << "2. Bersihkan Jurnalis dengan rating rendah||" << endl;
-            cout << "============================================" <<endl;
-            cout << "Pilihan: ";
-            cin >> subMenu;
-            if(subMenu == 1){
-                string idJ;
-                cout << "Masukkan ID Jurnalis yg ingin dihapus: "; cin >> idJ;
-                deleteJurnalisById(LJ, idJ);
-            }else if(subMenu == 2){
-                int batas;
-                cout << "Hapus jurnalis rating di bawah: "; cin >> batas;
-                deleteJurnalisByRatingBelow(LJ, batas);
+                cout << "ID jurnalis/Berita tidak ditemukan" << endl;
             }
         }else if(menu == 4){
             int subMenu;
