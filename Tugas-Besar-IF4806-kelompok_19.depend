@@ -1,46 +1,38 @@
 # depslib dependency file v1.0
-1765231752 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita_103012400189.cpp
-	<iostream>
+1765633216 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita_103012400189.cpp
 	"Berita.h"
 
-1765231352 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis_103012400047.cpp
-	<iostream>
-	"Berita.h"
+1765640586 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis_103012400047.cpp
 	"Jurnalis.h"
 
-1765231514 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main.cpp
+1765638319 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main.cpp
 	<iostream>
 	"Jurnalis.h"
-	"Berita.h"
 
-1765231549 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main_admin.cpp
+1765716976 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main_admin.cpp
 	"Jurnalis.h"
 	"Berita.h"
 	<iostream>
 
-1765231582 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main_user.cpp
+1765630742 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main_user.cpp
 	"Jurnalis.h"
 	"Berita.h"
 	<iostream>
 
-1765231727 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis_103012400189.cpp
-	<iostream>
-	"Berita.h"
+1765640680 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis_103012400189.cpp
 	"Jurnalis.h"
 
-1765231597 d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis.h
-	<iostream>
-	<string>
+1765632880 d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\jurnalis.h
 	"Berita.h"
-
-1765229312 d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita.h
 	<iostream>
 	<string>
 
-1765231744 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita_103012400047.cpp
+1765632629 d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita.h
 	<iostream>
+	<string>
+
+1765632655 source:d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\berita_103012400047.cpp
 	"Berita.h"
-	"Jurnalis.h"
 
 1764929733 d:\kuliah\semester3\struktur data\tubes\tugas-besar-if4806-kelompok_19\main_admin.cpp
 	"Jurnalis.h"
